@@ -199,6 +199,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\API\CustomersController.cs" />
     <Compile Include="Controllers\API\MoviesController.cs" />
+    <Compile Include="Controllers\API\NewRentalsController.cs" />
     <Compile Include="Controllers\CustomersController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -207,6 +208,7 @@
     <Compile Include="Dtos\GenreDto.cs" />
     <Compile Include="Dtos\MembershipTypeDto.cs" />
     <Compile Include="Dtos\MovieDto.cs" />
+    <Compile Include="Dtos\NewRentalDto.cs" />
     <Compile Include="GlimpseSecurityPolicy.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -263,8 +265,17 @@
     <Compile Include="Migrations\202104201536038_AddPhoneToApplicationUser.Designer.cs">
       <DependentUpon>202104201536038_AddPhoneToApplicationUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202105080720133_AddRental.cs" />
+    <Compile Include="Migrations\202105080720133_AddRental.Designer.cs">
+      <DependentUpon>202105080720133_AddRental.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105080800327_AddNumberAvailableToMovie.cs" />
+    <Compile Include="Migrations\202105080800327_AddNumberAvailableToMovie.Designer.cs">
+      <DependentUpon>202105080800327_AddNumberAvailableToMovie.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\ApplicationDbContext.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -272,6 +283,7 @@
     <Compile Include="Models\MembershipType.cs" />
     <Compile Include="Models\Min18YearsIfAMember.cs" />
     <Compile Include="Models\Movie.cs" />
+    <Compile Include="Models\Rental.cs" />
     <Compile Include="Models\RoleName.cs" />
     <Compile Include="ViewModels\CustomerFormViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -576,6 +588,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202104201536038_AddPhoneToApplicationUser.resx">
       <DependentUpon>202104201536038_AddPhoneToApplicationUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105080720133_AddRental.resx">
+      <DependentUpon>202105080720133_AddRental.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105080800327_AddNumberAvailableToMovie.resx">
+      <DependentUpon>202105080800327_AddNumberAvailableToMovie.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
